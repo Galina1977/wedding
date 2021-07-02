@@ -1,0 +1,214 @@
+У КНОПКИ И ССЫЛКИ ДОЛЖНО БЫТЬ ТРИ СОСТОЯНИЯ  :focus :hover :active
+
+  &:focus {
+    background-color: #ca067f;
+  }
+  &:hover {
+    background-color: #fff;
+    color: #100f2e;
+  }
+  &:active {
+    background-color: #c75a9d;
+  }
+___________________________________
+
+СТАНДАРТЫЕ ЗНАЧЕНИЯ ОТДЕЛЬНО
+
+<a class="" href="tel:+73912507475">+7(391)250-74-75</a>
+
+<a href="mailto:galyapener@mail.ru">Email: galyapener@mail.ru</a>
+
+<a class="address__link" href="#!">г. Красноярск, <br> ул. Горького, 18.</a>
+
+___________________________________
+
+<form class="form" action="#" autocomplete="on">
+
+        <label class="">Как Вас зовут?
+          <input class="" type="text" name="name" placeholder="Как Вас зовут?">
+       </label>
+
+
+       <label class="">Введите вашу фамилию
+          <input class="" type="text" name="name" placeholder="Введите вашу фамилию">
+       </label>
+
+
+        <label class="form__label">Телефон для связи
+          <input class="" type="tel" name="tel" placeholder="Телефон для связи *" required>
+        </label>
+
+
+        <label class="">Email
+          <input class="" type="text" name="еmail" placeholder="Email" required>
+        </label>
+
+        
+       <label>Введите пароль
+          <input type="password" name="password" placeholder="Введите пароль" required>
+       </label>
+
+
+      <label>Введите ваш адрес
+        <input type="text" name="address" placeholder="Введите ваш адрес" required>
+      </label>
+
+
+    <label>Ваше сообщение
+        <textarea name="message" placeholder="Ваше сообщение" spellcheck="true"></textarea>
+      </label>
+
+
+        <button class="btn" type="reset">Сбросить</button>
+        <button class="btn" type="submit">Отправить</button>
+
+
+Если в форме эти кнопки вместе то при отправки форма автоматически очиститься
+А если только одна кнопка то только отправится..чистить самим
+
+        
+        </form>
+____________________________________________________________
+<a class="" href="#"> Ваши данные в безопасности</a>
+
+______________________________________________________________
+
+ <form class="form" action="#" enctype="multipart/form-data">
+       <label>Отправить файл
+          <input type="file" name="file" placeholder="Выберите файл" required>
+       </label>
+ </form>
+
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+             Если Лейб с верху а не обертка то с id
+
+  <label for="еmail" class="about__label" >Ваш е-маил</label>
+        -----------
+  <input id="еmail" class="about__input" type="text" name="еmail" placeholder="Ваш е-маил" required>
+         ---------                                    ___________
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+В ФОРМАХ У КНОПОК ВСЕГДА  type="submit"
+Когда они не в форме то тогда type="button"
+
+____________________________________
+
+Прячем лейб
+label {
+    font-size: 0;
+    line-height: 0;
+  }
+
+__________________________________
+
+У ПОИСКА type="search"
+
+<label for="search" class="" > Поиск</label>
+<input id="search" class="search" type="text" name="search" placeholder="Поиск" required>
+
+___________________________________
+                   Чекбокс
+
+      <label class="">
+        <input class="" type="checkbox" name="country" value="1" checked>
+    Россия
+    </label>
+_____________________________________
+
+               Радио кнопка 1 вариант с name
+
+      <label class="">
+        <input class="" type="radio" name="radio" value="1" checked>
+        Новинки
+      </label>
+
+
+            2 вариант с name
+
+     <label class="">
+        <input class="" type="radio" name="food" value="1" checked>
+        Суп
+      </label>
+
+_________________________________________
+
+button:focus {
+  outline-offset: 1px;
+  outline-color: #fc5d5c;
+  outline-width: 1px;
+}
+
+a:focus {
+  outline-offset: 1px;
+  outline-color: #fc5d5c;
+  outline-width: 1px;
+}
+
+input:focus {
+  outline: none;
+  border-color: #c75a9d;
+}
+
+label {
+  font-size: 0;
+  line-height: 0;
+}
+
+_____________________________________________
+
+                  	СЕЛЕКТ
+
+<form class="filter-form" action="#">
+        <label for="city">Город</label>
+        <select id="city" class="filter-select filter-style" name="city">
+          <option>Москва</option>
+          <option>Пермь</option>
+          <option>Сочи</option>
+          <option>Уфа</option>
+        </select>
+      </form>
+
+_________________________________________
+     SCSS ФОРМЫ
+
+.form {
+  max-width: 285px;
+  &__input {
+    display: block;
+    width: 100%;
+    height: 53px;
+    padding: 21px 25px;
+    font-size: 16px;
+    line-height: 25px;
+    color: #fff;
+    // цвет который мы набираем
+    border: 1px solid #0095fe;
+    background-color: #ccc;
+    border-radius: 10px;
+    margin-bottom: 9px;
+    &::placeholder {
+      color: #fff;
+      // цвет который мы видим
+      opacity: 0.61;
+      line-height: 32px;
+    }
+  }
+  &__textarea {
+    display: block;
+    width: 100%;
+    height: 178px;
+    border: 1px solid #0095fe;
+    background-color: #ccc;
+    border-radius: 10px;
+    padding: 21px 25px;
+    color: #fff;
+    &::placeholder {
+      color: #fff;
+      opacity: 0.61;
+      line-height: 32px;
+    }
+  }
