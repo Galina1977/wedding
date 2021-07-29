@@ -48,6 +48,10 @@
     max-width: 100%;
     min-height: 425px;
     object-fit: contain;
+    transition: transform ease 0.9s;
+    &:hover {
+      transform: scale(1.5);
+    }
   }
   &__bottom {
     display: flex;
