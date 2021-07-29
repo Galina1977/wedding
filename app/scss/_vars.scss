@@ -1,31 +1,36 @@
-// @function max($numbers...) {
-//   @return m#{a}x(#{$numbers});
-// }
-// @function min($numbers...) {
-//   @return m#{i}n(#{$numbers});
-// }
+@function max($numbers...) {
+  @return m#{a}x(#{$numbers});
+}
+@function min($numbers...) {
+  @return m#{i}n(#{$numbers});
+}
 
-// %checkbox-hidden {
-//   width: 1;
-//   height: 1;
-//   overflow: hidden;
-//   clip: rect(0 0 0 0);
-//   position: absolute;
-// }
+%pacificoregular-400 {
+  font-family: "Pacifico-Regular", cursive;
+  font-weight: 400;
+}
 
-// %radio-hidden {
-//   width: 1px;
-//   height: 1px;
-//   overflow: hidden;
-//   clip: rect(0 0 0 0);
-//   position: absolute;
-// }
+%opensans-300 {
+  font-family: "OpenSans-Light", sans-serif;
+  font-weight: 300;
+}
 
-// $default: #7b7b7b;
-// $title: #1f2044;
-// $bg: #fcd7b6;
+%opensans-400 {
+  font-family: "OpenSans-Regular", sans-serif;
+  font-weight: 400;
+}
 
-// %dmsans-500 {
-//   font-family: "DMSans", sans-serif;
-//   font-weight: 500;
-// }
+%opensans-600 {
+  font-family: "OpenSans-SemiBold", sans-serif;
+  font-weight: 600;
+}
+
+%opensans-700 {
+  font-family: "OpenSans-Bold", sans-serif;
+  font-weight: 700;
+}
+
+%opensans-800 {
+  font-family: "OpenSans-ExtraBold", sans-serif;
+  font-weight: 800;
+}

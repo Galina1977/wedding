@@ -1,0 +1,41 @@
+.title {
+  max-width: 450px;
+  text-align: center;
+  @extend%opensans-600;
+  font-size: 33px;
+  line-height: 36px;
+  text-transform: uppercase;
+  color: #020202;
+  padding: 0 50px;
+  position: relative;
+  &::before,
+  &::after {
+    content: "";
+    background-repeat: no-repeat;
+    width: 33px;
+    height: 91px;
+    position: absolute;
+  }
+  &::before {
+    background-image: url("../images/before-after/border_left.png");
+    top: -32px;
+    left: 0;
+  }
+  &::after {
+    background-image: url("../images/before-after/border_right.png");
+    top: -33px;
+    right: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 25px;
+    line-height: 30px;
+    padding: 0;
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+}

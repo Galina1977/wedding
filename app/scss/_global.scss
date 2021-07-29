@@ -14,11 +14,12 @@ body {
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  @extend%opensans-400;
   font-style: normal;
   font-size: 16px;
   line-height: 1;
   background-color: #fff;
+  color: #fff;
   text-rendering: optimizeLegibility;
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
@@ -31,29 +32,4 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
-}
-
-button:focus {
-  outline-offset: 1px;
-  outline-color: #fc5d5c;
-  outline-width: 1px;
-}
-
-a:focus {
-  outline-offset: 1px;
-  outline-color: #fc5d5c;
-  outline-width: 1px;
-}
-
-input:focus {
-  outline: none;
-  border-color: #c75a9d;
-}
-
-@media (max-width: 768px) {
-  .animate__animated {
-    transition-property: none !important;
-    transform: none !important;
-    animation: none !important;
-  }
 }

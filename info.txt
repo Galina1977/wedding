@@ -1,8 +1,29 @@
-_______________________________________________
-http://galyapx5.beget.tech/
+#fff: #fff;
+$default: #030303;
+$title: #020202;
+#f605f9: #f605f9;
+$bg: #252525;
 
-http://galyapx5.beget.tech/permanent-makeup.html
-_________________________________________________
+
+@extend%pacificoregular-400;
+@extend%opensans-300;
+@extend%opensans-400;
+@extend%opensans-600;
+@extend%opensans-700;
+@extend%opensans-800;
+
+
+
+body {
+  @extend%opensans-400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 1;
+  background-color: #fff;
+  color: $default;
+}
+
+____________________________________________
 
 & > * {
       margin-right: 10px;
@@ -13,7 +34,7 @@ _________________________________________________
 ......................
 
 
-ИКОНКА готовый спрайт Бургера в (картинках-иконки)
+пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ (пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ-пїЅпїЅпїЅпїЅпїЅпїЅ)
 <button class="menu-btn">
         <svg class="menu-btn__svg">
           <use xlink:href="images/icon/menu-btn.svg#menu-btn"></use>
@@ -28,27 +49,6 @@ _________________________________________________
 href="#tab-1"
 
 id="tab-1" class="header__item"
-____________________________________
-
-@extend %checkbox-hidden; Прячем чекбокс
-@extend %radio-hidden; Прячем радио кнопки
-@extend %btn;  Кнопка
-
-$default: #fff;
-$accent: #4ec9f8;
-$bg: #1f50a3;
-
-
-@extend%proximaNova-400;  Шрифт
-
-
-
-body {
-  background-color: #ccc;
-  @extend%raleway-400;
-  font-size: 18px;
-  color: $default;
-}
 ____________________________________________
 
 background-image: url("../images/header/bg_button.png");
@@ -82,7 +82,7 @@ background-size: cover;
 }
 
 ______________________________________
-             Кнопку по ЦЕНТРУ!
+             пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ!
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -101,19 +101,19 @@ cursor: default;
 _____________________________________
 
 git add .
-git commit -m 'создала сайт'
+git commit -m 'пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ'
 git push origin main
 
-Запушев и у нас все арвно не уходит тогда
+пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅ пїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
 git pull
-и снова
+пїЅ пїЅпїЅпїЅпїЅпїЅ
 git push origin main
 
 ____________________________________________
 
 gulp build
 
-Всё что нам надо для ХОСТИНГА сжатое и готовое
+пїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 
 _______________________________________________
 
@@ -147,7 +147,7 @@ label {
 
 
 ___________________________
-Убираем анимацию
+пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 
 @media (max-width: 860px) {
   .informative-card {

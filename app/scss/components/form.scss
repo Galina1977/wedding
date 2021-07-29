@@ -1,0 +1,16 @@
+.form {
+   border-bottom: 1px solid #030303;
+   &__label {
+      display: block;
+      font-size: 0;
+      line-height: 0;
+   }
+   &__btn {
+      display: inline-block;
+      margin-right: auto;
+   }
+   &__icon {
+      width: 23px;
+      height: 23px;
+   }
+}

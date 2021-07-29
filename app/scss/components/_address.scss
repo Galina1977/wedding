@@ -1,0 +1,40 @@
+.address {
+  max-width: 420px;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 20px;
+  &__item {
+    display: block;
+    padding-left: 35px;
+    position: relative;
+    margin-bottom: 10px;
+    &:hover {
+      transition: color 0.4s;
+      &:hover {
+        color: #ff00ff;
+      }
+    }
+    &::before {
+      content: "";
+      background-repeat: no-repeat;
+      width: 23px;
+      height: 25px;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    &--add {
+      background-image: url("../images/icons/map.png");
+    }
+    &--mail {
+      &::before {
+        background-image: url("../images/icons/mail.png");
+      }
+    }
+    &--tel {
+      &::before {
+        background-image: url("../images/icons/tel.png");
+      }
+    }
+  }
+}
