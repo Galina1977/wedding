@@ -1,229 +1,257 @@
 .burger-anim {
-  &__body {
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    position: absolute;
-    overflow: hidden;
-  }
-  &__menu {
-    position: absolute;
-    bottom: 100%;
-    height: 100%;
-    background: #f605f9d6;
-    left: 0;
-    width: 100%;
-    animation: menu-close 1.5s 1 ease-out;
-    transition: all linear 0.5s ease;
-    overflow: auto;
-    z-index: 5;
-    &.active {
-      left: 0;
-      bottom: 0;
-      width: 40%;
-      animation: menu-anim 1.5s 1 ease-out forwards;
-      transition: all 0.5s ease;
-    }
-  }
-  ul.burger-anim__list {
-    padding: 70px 0;
-  }
-  &__list {
-    width: 100%;
-    text-align: center;
-    margin-top: 100px;
-    position: relative;
-  }
-  &__item {
-    & + & {
-      margin-top: 25px;
-    }
-  }
-  &__link {
-    display: inline-block;
-    @extend%opensans-400;
-    font-size: 18px;
-    line-height: 22px;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: #000;
-    transition: all linear 0.3s;
-    &:hover {
-      color: #fff;
-      text-shadow: 2px 2px 3px #000;
-    }
-    &--active {
-      color: #fff;
-      text-shadow: 2px 2px 3px #000;
-    }
-  }
-  &__img {
-    min-width: 200px;
-    height: 243px;
-    object-fit: cover;
-    margin: 0 auto;
-  }
-  &__burger {
-    display: block;
-    position: absolute;
-    top: 30px;
-    left: 30px;
-    width: 35px;
-    height: 35px;
-    z-index: 10;
-    &::before,
-    &::after {
-      content: "";
-      background-color: #fff;
-      position: absolute;
+   &__body {
       width: 100%;
-      height: 6px;
-      left: 0;
-      transition: all 0.3s ease 0s;
-    }
-    &::before {
+      height: 100%;
       top: 0;
-    }
-    &::after {
-      bottom: 7px;
-    }
-    span {
-      background-color: #fff;
-      position: absolute;
-      width: 100%;
-      height: 6px;
       left: 0;
-      top: 11px;
-      transition: all 0.3s ease 0s;
-    }
-  }
-  .burger-anim__burger.active::before {
-    transform: rotate(45deg);
-    top: 8px;
-  }
-  .burger-anim__burger.active::after {
-    transform: rotate(-45deg);
-    bottom: 21px;
-  }
-  .burger-anim__burger.active span {
-    transform: scale(0);
-  }
-}
-
-@keyframes border-anim {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(0);
-  }
+      position: absolute;
+      overflow: hidden;
+   }
+   &__menu {
+      position: fixed;
+      bottom: 100%;
+      height: 100%;
+      background: #f605f9d6;
+      left: 0;
+      width: 100%;
+      animation: menu-close 1.5s 1 ease-out;
+      transition: all linear 0.5s ease;
+      overflow: auto;
+      z-index: 5;
+      &.active {
+         left: 0;
+         bottom: 0;
+         animation: menu-anim 1.5s 1 ease-out forwards;
+         transition: all 0.5s ease;
+      }
+   }
+   ul.burger-anim__list {
+      padding: 180px 0;
+   }
+   &__list {
+      width: 100%;
+      text-align: center;
+      margin-top: 100px;
+      position: relative;
+   }
+   &__item {
+      & + & {
+         margin-top: 25px;
+      }
+   }
+   &__link {
+      display: inline-block;
+      @extend%opensans-400;
+      font-size: 18px;
+      line-height: 22px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #000;
+      transition: all linear 0.3s;
+      &:hover {
+         color: #fff;
+         text-shadow: 2px 2px 3px #000;
+      }
+   }
+   &__img {
+      min-width: 200px;
+      height: 243px;
+      object-fit: cover;
+      margin: 0 auto;
+   }
+   &__burger {
+      position: fixed;
+      top: 15px;
+      left: 30px;
+      width: 35px;
+      height: 35px;
+      z-index: 50;
+      &::before,
+      &::after {
+         content: "";
+         background-color: #fff;
+         position: absolute;
+         width: 100%;
+         height: 6px;
+         left: 0;
+         transition: all 0.3s ease 0s;
+      }
+      &::before {
+         top: 0;
+      }
+      &::after {
+         bottom: 7px;
+      }
+      span {
+         background-color: #fff;
+         position: absolute;
+         width: 100%;
+         height: 6px;
+         left: 0;
+         top: 11px;
+         transition: all 0.3s ease 0s;
+      }
+   }
+   .burger-anim__burger.active::before {
+      transform: rotate(45deg);
+      top: 8px;
+   }
+   .burger-anim__burger.active::after {
+      transform: rotate(-45deg);
+      bottom: 21px;
+   }
+   .burger-anim__burger.active span {
+      transform: scale(0);
+   }
+   body.lock {
+      overflow: hidden;
+   }
 }
 
 @keyframes menu-anim {
-  0% {
-    left: 0;
-    bottom: -99%;
-    width: 100%;
-  }
-  33% {
-    left: -99.5%;
-    bottom: -99%;
-    width: 100%;
-  }
-  66% {
-    left: -99.5%;
-    bottom: 0;
-    width: 100%;
-  }
-  100% {
-    bottom: 0;
-    left: 0;
-    width: 40%;
-  }
+   0% {
+      left: 0;
+      bottom: -99%;
+      width: 100%;
+   }
+   33% {
+      left: -99.5%;
+      bottom: -99%;
+      width: 100%;
+   }
+   66% {
+      left: -99.5%;
+      bottom: 0;
+      width: 100%;
+   }
+   100% {
+      bottom: 0;
+      left: 0;
+      width: 40%;
+   }
 }
 
 @keyframes menu-close {
-  100% {
-    left: 0;
-    bottom: -99%;
-    width: 100%;
-  }
-  66% {
-    left: -99.5%;
-    bottom: -99%;
-    width: 100%;
-  }
-  33% {
-    left: -99.5%;
-    bottom: 0;
-    width: 100%;
-  }
-  0% {
-    bottom: 0;
-    left: 0;
-    width: 40%;
-  }
+   100% {
+      left: 0;
+      bottom: -99%;
+      width: 100%;
+   }
+   66% {
+      left: -99.5%;
+      bottom: -99%;
+      width: 100%;
+   }
+   33% {
+      left: -99.5%;
+      bottom: 0;
+      width: 100%;
+   }
+   0% {
+      bottom: 0;
+      left: 0;
+      width: 40%;
+   }
 }
 
-@media (max-width: 1370px) {
-  body.lock {
-    overflow: hidden;
-  }
-  .burger-anim {
-    &__menu {
-      &.active {
-        width: 100%;
+@media (max-width: 992px) {
+   @keyframes menu-anim {
+      0% {
+         left: 0;
+         bottom: -99%;
+         width: 100%;
       }
-    }
-    ul.burger-anim__list {
-      padding: 50px 0;
-    }
-  }
+      33% {
+         left: -99.5%;
+         bottom: -99%;
+         width: 100%;
+      }
+      66% {
+         left: -99.5%;
+         bottom: 0;
+         width: 100%;
+      }
+      100% {
+         bottom: 0;
+         left: 0;
+         width: 60%;
+      }
+   }
 
-  @keyframes menu-anim {
-    0% {
-      left: 0;
-      bottom: -99%;
-      width: 100%;
-    }
-    33% {
-      left: -99.5%;
-      bottom: -99%;
-      width: 100%;
-    }
-    66% {
-      left: -99.5%;
-      bottom: 0;
-      width: 100%;
-    }
-    100% {
-      bottom: 0;
-      left: 0;
-      width: 100%;
-    }
-  }
+   @keyframes menu-close {
+      100% {
+         left: 0;
+         bottom: -99%;
+         width: 100%;
+      }
+      66% {
+         left: -99.5%;
+         bottom: -99%;
+         width: 100%;
+      }
+      33% {
+         left: -99.5%;
+         bottom: 0;
+         width: 100%;
+      }
+      0% {
+         bottom: 0;
+         left: 0;
+         width: 60%;
+      }
+   }
+}
 
-  @keyframes menu-close {
-    100% {
-      left: 0;
-      bottom: -99%;
-      width: 100%;
-    }
-    66% {
-      left: -99.5%;
-      bottom: -99%;
-      width: 100%;
-    }
-    33% {
-      left: -99.5%;
-      bottom: 0;
-      width: 100%;
-    }
-    0% {
-      bottom: 0;
-      left: 0;
-      width: 100%;
-    }
-  }
+@media (max-width: 768px) {
+   @keyframes menu-anim {
+      0% {
+         left: 0;
+         bottom: -99%;
+         width: 100%;
+      }
+      33% {
+         left: -99.5%;
+         bottom: -99%;
+         width: 100%;
+      }
+      66% {
+         left: -99.5%;
+         bottom: 0;
+         width: 100%;
+      }
+      100% {
+         bottom: 0;
+         left: 0;
+         width: 100%;
+      }
+   }
+
+   @keyframes menu-close {
+      100% {
+         left: 0;
+         bottom: -99%;
+         width: 100%;
+      }
+      66% {
+         left: -99.5%;
+         bottom: -99%;
+         width: 100%;
+      }
+      33% {
+         left: -99.5%;
+         bottom: 0;
+         width: 100%;
+      }
+      0% {
+         bottom: 0;
+         left: 0;
+         width: 100%;
+      }
+   }
+}
+
+@media (max-width: 576px) {
+   .burger-anim ul.burger-anim__list {
+      padding: 140px 0;
+   }
 }

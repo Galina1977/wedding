@@ -1,138 +1,139 @@
 .atelier {
-  padding-top: 206px;
-  &__header {
-    margin-bottom: 40px;
-  }
-  &__title {
-    margin: 0 auto 80px;
-  }
-  &__text {
-    font-size: 20px;
-    line-height: 30px;
-    color: #020202;
-  }
-  &__inner {
-    background-color: #000;
-    padding: 35px 0 80px;
-  }
-  &__body {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  &__content {
-    max-width: 750px;
-    color: #fff;
-    text-align: center;
-  }
-  &__subtitle {
-    max-width: 470px;
-    @extend%opensans-700;
-    font-size: 17px;
-    line-height: 30px;
-    text-transform: uppercase;
-    margin: 0 auto 40px;
-    span {
-      padding-bottom: 1px;
-      border-bottom: 2px solid #fff;
-    }
-  }
-  &__desc {
-    font-size: 16px;
-    line-height: 28px;
-  }
-  &__images {
-    max-width: 320px;
-  }
-  &__img {
-    max-width: 100%;
-    min-height: 425px;
-    object-fit: contain;
-    transition: transform ease 0.9s;
-    &:hover {
-      transform: scale(1.5);
-    }
-  }
-  &__bottom {
-    display: flex;
-    justify-content: space-between;
-    max-width: 750px;
-  }
-  &__link {
-    font-size: 16px;
-    line-height: 28px;
-    text-transform: uppercase;
-    color: #fdfcfc;
-    transition: color 0.4s;
-    &:hover {
-      color: #ff00ff;
-      .atelier__icon {
-        fill: #ff00ff;
-        transition: fill 0.4s;
+   padding-top: 206px;
+   &__header {
+      margin-bottom: 40px;
+   }
+   &__title {
+      margin: 0 auto 80px;
+   }
+   &__text {
+      font-size: 20px;
+      line-height: 30px;
+      color: #020202;
+   }
+   &__inner {
+      background-color: #000;
+      padding: 35px 0 80px;
+   }
+   &__body {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+   &__content {
+      max-width: 750px;
+      color: #fff;
+      text-align: center;
+   }
+   &__subtitle {
+      max-width: 470px;
+      @extend%opensans-700;
+      font-size: 17px;
+      line-height: 30px;
+      text-transform: uppercase;
+      margin: 0 auto 40px;
+      span {
+         padding-bottom: 1px;
+         border-bottom: 2px solid #fff;
       }
-    }
-  }
-  &__icon {
-    width: 26px;
-    height: 18px;
-    fill: #fff;
-    margin-left: 10px;
-  }
+   }
+   &__desc {
+      text-align: left;
+      font-size: 16px;
+      line-height: 28px;
+   }
+   &__images {
+      max-width: 320px;
+   }
+   &__img {
+      max-width: 100%;
+      min-height: 425px;
+      object-fit: contain;
+      transition: transform ease 0.9s;
+      &:hover {
+         transform: scale(1.5);
+      }
+   }
+   &__bottom {
+      display: flex;
+      justify-content: space-between;
+      max-width: 750px;
+   }
+   &__link {
+      font-size: 16px;
+      line-height: 28px;
+      text-transform: uppercase;
+      color: #fdfcfc;
+      transition: color 0.4s;
+      &:hover {
+         color: #ff00ff;
+         .atelier__icon {
+            fill: #ff00ff;
+            transition: fill 0.4s;
+         }
+      }
+   }
+   &__icon {
+      width: 26px;
+      height: 18px;
+      fill: #fff;
+      margin-left: 10px;
+   }
 }
 
 @media (max-width: 1370px) {
-  .atelier {
-    padding-top: 155px;
-    &__body {
-      flex-direction: column;
-      justify-content: center;
-    }
-    &__bottom {
-      max-width: 100%;
-    }
-  }
+   .atelier {
+      padding-top: 155px;
+      &__body {
+         flex-direction: column;
+         justify-content: center;
+      }
+      &__bottom {
+         max-width: 100%;
+      }
+   }
 }
 
 @media (max-width: 768px) {
-  .atelier {
-    padding-top: 85px;
-    &__title {
-      margin: 0 auto 40px;
-    }
-    &__img {
-      min-height: 285px;
-    }
-    &__bottom {
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-    &__link {
-      & + & {
-        margin-top: 5px;
+   .atelier {
+      padding-top: 85px;
+      &__title {
+         margin: 0 auto 40px;
       }
-    }
-  }
+      &__img {
+         min-height: 285px;
+      }
+      &__bottom {
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+      }
+      &__link {
+         & + & {
+            margin-top: 5px;
+         }
+      }
+   }
 }
 
 @media (max-width: 480px) {
-  .atelier {
-    padding-top: 60px;
-    &__title {
-      margin: 0 auto 20px;
-    }
-    &__text {
-      font-size: 19px;
-      line-height: 24px;
-    }
-    &__content {
-      text-align: left;
-    }
-    &__subtitle {
-      margin: 0 auto 25px;
-    }
-    &__inner {
-      padding: 35px 0 45px;
-    }
-  }
+   .atelier {
+      padding-top: 60px;
+      &__title {
+         margin: 0 auto 20px;
+      }
+      &__text {
+         font-size: 19px;
+         line-height: 24px;
+      }
+      &__content {
+         text-align: left;
+      }
+      &__subtitle {
+         margin: 0 auto 25px;
+      }
+      &__inner {
+         padding: 35px 0 45px;
+      }
+   }
 }
