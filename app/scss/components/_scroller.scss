@@ -1,25 +1,25 @@
 .scroller {
-  position: fixed;
-  bottom: 30px;
-  left: 20px;
-  cursor: pointer;
-  z-index: 1000;
-  display: none;
-  &__arrow {
-    display: block;
-    width: 55px;
-    height: 55px;
-    color: #f605f9;
-    stroke: #000;
-    transition: color 0.4s;
-  }
+   position: fixed;
+   bottom: 30px;
+   right: 20px;
+   cursor: pointer;
+   z-index: 1000;
+   display: none;
+   &__arrow {
+      display: block;
+      width: 55px;
+      height: 55px;
+      color: #f605f9;
+      stroke: #000;
+      transition: color 0.4s;
+   }
 }
 
 @media (max-width: 768px) {
-  .scroller {
-    &__arrow {
-      width: 40px;
-      height: 40px;
-    }
-  }
+   .scroller {
+      &__arrow {
+         width: 40px;
+         height: 40px;
+      }
+   }
 }

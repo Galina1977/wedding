@@ -67,6 +67,9 @@
          top: 4px;
       }
    }
+   body.lock {
+      overflow: hidden;
+   }
 }
 
 @media (max-width: 1370px) {
